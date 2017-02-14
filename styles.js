@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   swipeoutBtnTouchable: {
-    flex: 1,
+    flexGrow: 1,
   },
   swipeoutBtn: {
     alignItems: 'center',
     backgroundColor: '#b6bec0',
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
     overflow: 'hidden',
   },
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
   swipeoutBtns: {
     bottom: 0,
-    flex: 1,
+    flexGrow: 1,
     flexDirection: 'row',
     position: 'absolute',
     right: 0,
