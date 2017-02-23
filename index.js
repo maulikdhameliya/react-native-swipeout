@@ -156,10 +156,11 @@ const Swipeout = React.createClass({
       this.props.onOpen(this.props.sectionID, this.props.rowID);
     }
     this.refs.swipeoutContent.measure((ox, oy, width, height) => {
+      var widthButton = width/7*4;
       this.setState({
-        btnWidth: (width/5),
-        btnsLeftWidth: this.props.left ? (width/5)*this.props.left.length : 0,
-        btnsRightWidth: this.props.right ? (width/5)*this.props.right.length : 0,
+        btnWidth: widthButton,
+        btnsLeftWidth: this.props.left ? widthButton*this.props.left.length : 0,
+        btnsRightWidth: this.props.right ? widthButton*this.props.right.length : 0,
         swiping: true,
         timeStart: (new Date()).getTime(),
       });
