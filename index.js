@@ -299,9 +299,11 @@ const Swipeout = React.createClass({
 
     var styleRight = [styles.swipeoutBtns];
     styleRight.push(styleRightPos.right);
+    styleRight.push({marginLeft: 5});
 
     var styleLeft = [styles.swipeoutBtns];
     styleLeft.push(styleLeftPos.left);
+    styleLeft.push({margin: 5});
 
     var isRightVisible = posX < 0;
     var isLeftVisible = posX > 0;
