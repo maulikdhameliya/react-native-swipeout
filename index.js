@@ -157,6 +157,7 @@ const Swipeout = React.createClass({
     }
     this.refs.swipeoutContent.measure((ox, oy, width, height) => {
       var widthButton = width/7*4;
+      if (widthButton > 214) widthButton = 214;
       this.setState({
         btnWidth: widthButton,
         btnsLeftWidth: this.props.left ? widthButton*this.props.left.length : 0,
