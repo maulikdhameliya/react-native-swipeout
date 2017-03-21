@@ -128,7 +128,7 @@ const Swipeout = React.createClass({
       contentWidth: 0,
       openedRight: false,
       swiping: false,
-      tweenDuration: 80,
+      tweenDuration: 160,
       timeStart: null,
     };
   },
