@@ -151,8 +151,13 @@ const Swipeout = React.createClass({
   },
 
   componentWillReceiveProps: function(nextProps) {
-    if (nextProps.close) this._close();
-  },
+   if (nextProps.close) {
+     var t = this;
+     setTimeout(function() {
+       t._close();
+     }, 250);
+   }
+ },
 
   _handlePanResponderGrant: function(e: Object, gestureState: Object) {
     if(this.props.onOpen){
