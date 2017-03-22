@@ -155,8 +155,8 @@ const Swipeout = React.createClass({
     if(this.props.onOpen){
       this.props.onOpen(this.props.sectionID, this.props.rowID);
     }
-    this.refs.swipeoutContent.measure((ox, oy, width, height) => {
-      var widthButton = width/7*4;
+    // this.refs.swipeoutContent.measure((ox, oy, width, height) => {
+      var widthButton = Math.min(window.width / 7 * 4, 432); // 432 is width in iPad and tablet
       this.setState({
         btnWidth: widthButton,
         btnsLeftWidth: this.props.left ? widthButton*this.props.left.length : 0,
@@ -164,7 +164,7 @@ const Swipeout = React.createClass({
         swiping: true,
         timeStart: (new Date()).getTime(),
       });
-    });
+    // });
   },
 
   _handlePanResponderMove: function(e: Object, gestureState: Object) {
