@@ -13,7 +13,10 @@ import {
   StyleSheet,
   Text,
   View,
+  Dimensions
 } from 'react-native';
+
+const window = Dimensions.get('window');
 
 const SwipeoutBtn = React.createClass({
 
