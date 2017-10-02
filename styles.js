@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#dbddde', //b6bec0
     flexGrow: 1,
-    borderRadius:3,
+    // borderRadius:3,
     justifyContent: 'center',
     overflow: 'hidden',
   },
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     position: 'absolute',
     right: 0,
-    top: 0,
+    top: 0
   },
   swipeoutContent: {
   },
