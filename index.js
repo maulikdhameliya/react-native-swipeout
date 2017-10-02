@@ -305,11 +305,11 @@ const Swipeout = React.createClass({
 
     var styleRight = [styles.swipeoutBtns];
     styleRight.push(styleRightPos.right);
-    styleRight.push({marginLeft: 5});
+    // styleRight.push({marginLeft: 5});
 
     var styleLeft = [styles.swipeoutBtns];
     styleLeft.push(styleLeftPos.left);
-    styleLeft.push({margin: 5});
+    // styleLeft.push({margin: 5});
 
     var isRightVisible = posX < 0;
     var isLeftVisible = posX > 0;
@@ -321,6 +321,8 @@ const Swipeout = React.createClass({
           style={styleContent}      
           pointerEvents='box-none'
           onLayout={this._onLayout}
+          testID={this.props.testID}
+          accessibilityLabel={this.props.testID}
           {...this._panResponder.panHandlers}>
           {this.props.children}
         </View>
