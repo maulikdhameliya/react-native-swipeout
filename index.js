@@ -269,6 +269,21 @@ const Swipeout = React.createClass({
       openedLeft: false,
     });
   },
+  
+  _openRight: function() {
+    var widthButton = this.props.buttonWidth || Math.min(window.width / 7 * 4, 432); // 432 is width in iPad and tablet
+    this.setState({
+        btnWidth: widthButton,
+        btnsRightWidth: this.props.right ? widthButton*this.props.right.length : 0,
+      }, () => {
+        this._tweenContent('contentPos', -this.state.btnsRightWidth);
+        this.setState({ contentPos: -this.state.btnsRightWidth, openedLeft: false, openedRight: true });
+      });
+  },
+
+  _isOpenRight: function() {
+    return this.state.openedRight
+  },
 
   render: function() {
     var contentWidth = this.state.contentWidth;
