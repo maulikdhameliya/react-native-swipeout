@@ -110,6 +110,7 @@ const Swipeout = React.createClass({
     scroll: PropTypes.func,
     style: View.propTypes.style,
     sensitivity: PropTypes.number,
+    buttonWidth: PropTypes.number
   },
 
   getDefaultProps: function() {
@@ -162,7 +163,7 @@ const Swipeout = React.createClass({
       this.props.onOpen(this.props.sectionID, this.props.rowID);
     }
     // this.refs.swipeoutContent.measure((ox, oy, width, height) => {
-      var widthButton = Math.min(window.width / 7 * 4, 432); // 432 is width in iPad and tablet
+      var widthButton = this.props.buttonWidth || Math.min(window.width / 7 * 4, 432); // 432 is width in iPad and tablet
       this.setState({
         btnWidth: widthButton,
         btnsLeftWidth: this.props.left ? widthButton*this.props.left.length : 0,
